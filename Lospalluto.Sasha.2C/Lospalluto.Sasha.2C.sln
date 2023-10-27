@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaDeClases", "BibliotecaDeClases\BibliotecaDeClases.csproj", "{E585990F-8A3F-4F0F-9B18-74B4E970B984}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiFabrica", "MiFabrica\MiFabrica.csproj", "{4E26D3BC-F7E0-46BA-A50C-D0C2EF8F344E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E585990F-8A3F-4F0F-9B18-74B4E970B984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E585990F-8A3F-4F0F-9B18-74B4E970B984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E585990F-8A3F-4F0F-9B18-74B4E970B984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E585990F-8A3F-4F0F-9B18-74B4E970B984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E26D3BC-F7E0-46BA-A50C-D0C2EF8F344E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E26D3BC-F7E0-46BA-A50C-D0C2EF8F344E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E26D3BC-F7E0-46BA-A50C-D0C2EF8F344E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E26D3BC-F7E0-46BA-A50C-D0C2EF8F344E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79955140-8EBF-41A0-AD99-73575DC86B62}
+	EndGlobalSection
+EndGlobal
