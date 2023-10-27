@@ -18,15 +18,24 @@ namespace BibliotecaDeClases
             }
         }
 
-        public Camioneta(EPropulsion propulsion, bool cabinaSimple) :base(propulsion, true)
+        public Camioneta(EPropulsion propulsion, bool cabinaSimple) : base(propulsion, true)
         {
             this.cabinaSimple = cabinaSimple;
         }
 
-        protected override string GetInfo()
+        protected new string GetInfo()
         {
-            string info = string.Format("{0} con cambina {1}", base.ToString(), this.cabinaSimple ? "Simple" : "Doble");
-            return info;
+            StringBuilder sb = new StringBuilder();
+            sb.Append($"{base.ToString()} con cambina ");
+            if(cabinaSimple)
+            {
+                sb.Append("Simple");
+            }
+            else
+            {
+                sb.Append("Doble");
+            }
+            return sb.ToString();
         }
     }
 }

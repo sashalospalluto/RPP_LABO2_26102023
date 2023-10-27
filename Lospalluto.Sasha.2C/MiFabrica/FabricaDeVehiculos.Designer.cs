@@ -40,7 +40,7 @@
             // 
             // btnFabricar
             // 
-            btnFabricar.Location = new Point(521, 218);
+            btnFabricar.Location = new Point(622, 212);
             btnFabricar.Name = "btnFabricar";
             btnFabricar.Size = new Size(200, 54);
             btnFabricar.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             // btnElimimar
             // 
-            btnElimimar.Location = new Point(521, 278);
+            btnElimimar.Location = new Point(622, 272);
             btnElimimar.Name = "btnElimimar";
             btnElimimar.Size = new Size(200, 50);
             btnElimimar.TabIndex = 1;
@@ -62,8 +62,7 @@
             // 
             cmbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTipo.FormattingEnabled = true;
-            cmbTipo.Items.AddRange(new object[] { "Automovil", "Camioneta", "Moto" });
-            cmbTipo.Location = new Point(521, 56);
+            cmbTipo.Location = new Point(622, 50);
             cmbTipo.Name = "cmbTipo";
             cmbTipo.Size = new Size(200, 23);
             cmbTipo.TabIndex = 2;
@@ -72,7 +71,7 @@
             // 
             lblTipo.AutoSize = true;
             lblTipo.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTipo.Location = new Point(542, 28);
+            lblTipo.Location = new Point(643, 22);
             lblTipo.Name = "lblTipo";
             lblTipo.Size = new Size(163, 25);
             lblTipo.TabIndex = 3;
@@ -84,13 +83,13 @@
             lstVehiculos.ItemHeight = 15;
             lstVehiculos.Location = new Point(12, 22);
             lstVehiculos.Name = "lstVehiculos";
-            lstVehiculos.Size = new Size(490, 319);
+            lstVehiculos.Size = new Size(583, 319);
             lstVehiculos.TabIndex = 4;
             // 
             // pcbFabrica
             // 
             pcbFabrica.Image = (Image)resources.GetObject("pcbFabrica.Image");
-            pcbFabrica.Location = new Point(550, 95);
+            pcbFabrica.Location = new Point(651, 89);
             pcbFabrica.Name = "pcbFabrica";
             pcbFabrica.Size = new Size(131, 106);
             pcbFabrica.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -101,7 +100,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(733, 361);
+            ClientSize = new Size(850, 361);
             Controls.Add(pcbFabrica);
             Controls.Add(lstVehiculos);
             Controls.Add(lblTipo);

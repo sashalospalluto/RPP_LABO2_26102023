@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Runtime.CompilerServices;
+using System.Text;
 
 namespace BibliotecaDeClases
 {
@@ -10,37 +11,35 @@ namespace BibliotecaDeClases
     }
     public abstract class Vehiculo
     {
-        
+
         protected bool esAWD;
         protected Guid numeroDeChasis;
         protected EPropulsion propulsion;
 
-        public EPropulsion Propulsion 
+        public EPropulsion Propulsion
         {
             get
             {
                 return this.propulsion;
             }
         }
-        
+
         protected abstract string Tipo { get; }
 
-        protected Vehiculo(EPropulsion propulsion)
+        protected Vehiculo(EPropulsion propulsion) : this(propulsion, false)
         {
-            esAWD = false;
-            this.propulsion = propulsion;
-            numeroDeChasis = new Guid();
+
         }
 
-        protected Vehiculo(EPropulsion propulsion, bool esAWD) :this(propulsion)
+        protected Vehiculo(EPropulsion propulsion, bool esAWD)
         {
             this.esAWD = esAWD;
+            numeroDeChasis = Guid.NewGuid();
         }
 
-        protected virtual string GetInfo()
+        protected string GetInfo()
         {
-            string info = string.Format("\n{0} con propulsion a {1}, {2} es AWD, numero de chasis {3}", this.GetType().Name, this.propulsion, this.esAWD ? "SI" : "NO", this.numeroDeChasis);
-
+            string info = string.Format("\n{0} con propulsion a {1}, {2} es AWD, numero de chasis {3}", this.Tipo, this.propulsion, this.esAWD ? "SI" : "NO", this.numeroDeChasis);
             return info;
         }
 
@@ -50,7 +49,7 @@ namespace BibliotecaDeClases
         }
         public static bool operator ==(Vehiculo v1, Vehiculo v2)
         {
-            return v1.esAWD == v2.esAWD && v1.Tipo == v2.Tipo;
+            return v1.numeroDeChasis == v2.numeroDeChasis && v1.GetType() == v2.GetType();
         }
 
         public static bool operator != (Vehiculo v1 , Vehiculo v2)

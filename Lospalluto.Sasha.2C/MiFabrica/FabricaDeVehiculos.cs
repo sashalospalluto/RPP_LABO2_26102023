@@ -21,13 +21,19 @@ namespace MiFabrica
 
         private void FabricaDeVehiculos_Load(object sender, EventArgs e)
         {
-
+            this.cmbTipo.DataSource = new List<string>
+            {
+                "Automovil",
+                "Camioneta",
+                "Moto"
+            };
         }
 
         private void btnElimimar_Click(object sender, EventArgs e)
         {
             Vehiculo vehiculoSeleccionado = (Vehiculo)lstVehiculos.SelectedItem;
             fabrica = fabrica - vehiculoSeleccionado;
+            this.Refrescar();
         }
 
         private Vehiculo CrearVehiculo()
@@ -44,14 +50,13 @@ namespace MiFabrica
                     Moto m = new Moto(EPropulsion.Electrica);
                     return m;
             }
-
         }
 
         private void InicializarFabrica()
         {
             fabrica = new Fabrica(3);
-            //Camioneta c1 = new Camioneta(EPropulsion.Electrica, true);
-            //fabrica = fabrica + c1;
+            Camioneta c1 = new Camioneta(EPropulsion.Electrica, true);
+            fabrica = fabrica + c1;
         }
 
         private void Refrescar()
