@@ -62,6 +62,7 @@
             // 
             cmbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTipo.FormattingEnabled = true;
+            cmbTipo.Items.AddRange(new object[] { "Automovil", "Camioneta", "Moto" });
             cmbTipo.Location = new Point(521, 56);
             cmbTipo.Name = "cmbTipo";
             cmbTipo.Size = new Size(200, 23);

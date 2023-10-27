@@ -21,9 +21,7 @@ namespace MiFabrica
 
         private void FabricaDeVehiculos_Load(object sender, EventArgs e)
         {
-            this.lstVehiculos.Items.Add("Automovil");
-            this.lstVehiculos.Items.Add("Camioneta");
-            this.lstVehiculos.Items.Add("Moto");
+
         }
 
         private void btnElimimar_Click(object sender, EventArgs e)
@@ -34,26 +32,26 @@ namespace MiFabrica
 
         private Vehiculo CrearVehiculo()
         {
-            switch (this.cmbTipo.SelectedIndex.ToString())
+            switch (this.cmbTipo.SelectedItem.ToString())
             {
                 case "Automovil":
                     Automovil a = new Automovil();
                     return a;
                 case "Camioneta":
-                    Camioneta c = new Camioneta(EPropulsion.Hibrida,false);
+                    Camioneta c = new Camioneta(EPropulsion.Hibrida, false);
                     return c;
                 default:
                     Moto m = new Moto(EPropulsion.Electrica);
-                    return m;                                    
+                    return m;
             }
-           
+
         }
 
         private void InicializarFabrica()
         {
             fabrica = new Fabrica(3);
-            Camioneta c1 = new Camioneta(EPropulsion.Electrica, true);
-            fabrica = fabrica + c1;
+            //Camioneta c1 = new Camioneta(EPropulsion.Electrica, true);
+            //fabrica = fabrica + c1;
         }
 
         private void Refrescar()
